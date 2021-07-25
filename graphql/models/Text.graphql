@@ -1,0 +1,11 @@
+type Text {
+    id: ID!
+    language: Language!
+    text: String!
+    text_id: ID!
+    type: TextType!
+    count: Int
+    creator: User!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

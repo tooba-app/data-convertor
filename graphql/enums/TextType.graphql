@@ -1,0 +1,11 @@
+enum TextType {
+    QURAN
+    BEADS
+    DUA
+    ZIYARAT
+    TITLE
+    DESCRIPTION
+    LABLE
+    NOTIFICATION
+    AMOUNT
+}

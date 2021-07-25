@@ -1,0 +1,9 @@
+type Notification {
+    id: ID!
+    title: Text
+    description: Text
+    date_time: ToobaDateTime
+    place: Place
+    created_at: DateTime!
+    updated_at: DateTime!
+}

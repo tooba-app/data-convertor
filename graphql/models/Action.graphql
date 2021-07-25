@@ -1,0 +1,13 @@
+type Action {
+    id: ID!
+    title: Text
+    description: Text
+    actions: [Action]!
+    Texts: [Text]!
+    type: ActionType!
+    creator: User!
+    notification: [Notification]!
+    score: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

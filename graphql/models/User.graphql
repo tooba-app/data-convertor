@@ -1,0 +1,12 @@
+type User {
+    id: ID!
+    name: String
+    email: String
+    phone: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+extend type Query {
+    Users: [User!]! @paginate @guard(with: ["api"])
+}

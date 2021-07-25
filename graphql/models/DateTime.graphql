@@ -1,0 +1,8 @@
+type DateTime {
+    id: ID!
+    date: DateTime!
+    from: String
+    to: String
+    created_at: DateTime!
+    updated_at: DateTime!
+}
