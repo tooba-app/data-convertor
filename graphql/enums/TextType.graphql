@@ -8,4 +8,5 @@ enum TextType {
     LABLE
     NOTIFICATION
     AMOUNT
+    SITE
 }
