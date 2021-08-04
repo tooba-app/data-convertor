@@ -1,0 +1,10 @@
+type Place {
+    id: ID!
+    title: Text
+    description: Text
+    lat: String!
+    long: String!
+    creator: User!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
