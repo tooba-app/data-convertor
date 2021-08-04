@@ -1,8 +1,0 @@
-type Dua {
-    id: ID!
-    name: String
-    texts: [TextGroup]!
-    text: Text
-    created_at: DateTime!
-    updated_at: DateTime!
-}
