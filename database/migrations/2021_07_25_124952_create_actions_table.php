@@ -13,9 +13,26 @@ class CreateActionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actions', function (Blueprint $table) {
+        Schema::create("actions", function (Blueprint $table) {
             $table->id();
+            $table
+                ->foreignId("creator")
+                ->constrained("users")
+                ->onDelete("SET NULL");
+            $table
+                ->foreignId("title")
+                ->constrained("texts", "text_id")
+                ->onDelete("SET NULL");
+            $table
+                ->foreignId("description")
+                ->constrained("texts", "text_id")
+                ->onDelete("SET NULL");
+
+            $table->string("type");
+            $table->integer("score");
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +43,6 @@ class CreateActionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actions');
+        Schema::dropIfExists("actions");
     }
 }
