@@ -15,7 +15,32 @@ class CreateTextTable extends Migration
     {
         Schema::create("texts", function (Blueprint $table) {
             $table->id();
+            $table
+                ->foreignId("text_id")
+                ->constrained("texts")
+                ->onDelete("CASCADE");
+
+            $table
+                ->foreignId("creator")
+                ->constrained("users")
+                ->onDelete("SET NULL");
+
+            $table
+                ->foreignId("language")
+                ->constrained("languages")
+                ->onDelete("CASCADE");
+
+            $table->text("text");
+            $table->string("type");
+            $table->string("status");
+
+            $table
+                ->foreign("text_id")
+                ->references("id")
+                ->on("texts");
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
