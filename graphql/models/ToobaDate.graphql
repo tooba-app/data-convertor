@@ -1,0 +1,10 @@
+type ToobaDate {
+    id: ID!
+    title: Text
+    description: Text
+    month: Integer!
+    day: Integer!
+    creator: User!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

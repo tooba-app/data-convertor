@@ -1,0 +1,10 @@
+type ToobaTime {
+    id: ID!
+    title: Text
+    description: Text
+    time: String
+    depend_on: String
+    creator: User!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
