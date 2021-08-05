@@ -1,6 +1,7 @@
 type Language {
     id: ID!
     code: String!
+    name: String!
     created_at: DateTime!
     updated_at: DateTime!
 }
