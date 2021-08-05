@@ -41,9 +41,16 @@ class CreateNotificationsTable extends Migration
                 ->constrained("tooba_dates", "id")
                 ->onDelete("CASCADE")
                 ->nullable();
+
             $table
                 ->foreignId("time_id")
                 ->constrained("tooba_times", "id")
+                ->onDelete("CASCADE")
+                ->nullable();
+
+            $table
+                ->foreignId("place_id")
+                ->constrained("places", "id")
                 ->onDelete("CASCADE")
                 ->nullable();
 
