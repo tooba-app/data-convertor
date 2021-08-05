@@ -7,7 +7,7 @@ type Notification {
     place: Place
     creator: User!
     action: Action!
-    users: [User]!
+    # users: [User]
     created_at: DateTime!
     updated_at: DateTime!
 }
