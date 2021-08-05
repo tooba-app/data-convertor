@@ -17,7 +17,7 @@ class CreateTextTable extends Migration
             $table->id();
             $table
                 ->foreignId("text_id")
-                ->constrained("texts")
+                ->constrained("texts", "id")
                 ->onDelete("CASCADE");
 
             $table
