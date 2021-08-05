@@ -2,7 +2,8 @@ type Action {
     id: ID!
     title: Text
     description: Text
-    actions: [Action]!
+    child_actions: [Action]!
+    parent_actions: [Action]!
     Texts: [Text]!
     type: ActionType!
     creator: User!
