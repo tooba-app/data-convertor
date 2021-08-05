@@ -26,10 +26,11 @@ class CreateTextTable extends Migration
                 ->onDelete("SET NULL")
                 ->nullable();
 
+            $table->string("language");
             $table
-                ->foreignId("language")
-                ->constrained("languages")
-                ->onDelete("CASCADE");
+                ->foreign("language")
+                ->references("code")
+                ->on("languages");
 
             $table->text("text");
             $table->string("type");
