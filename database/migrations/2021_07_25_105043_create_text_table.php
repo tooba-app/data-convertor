@@ -23,7 +23,8 @@ class CreateTextTable extends Migration
             $table
                 ->foreignId("creator")
                 ->constrained("users")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
 
             $table
                 ->foreignId("language")

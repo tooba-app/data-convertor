@@ -18,15 +18,18 @@ class CreateActionsTable extends Migration
             $table
                 ->foreignId("creator")
                 ->constrained("users")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
             $table
                 ->foreignId("title")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
             $table
                 ->foreignId("description")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
 
             $table->string("type");
             $table->integer("score");

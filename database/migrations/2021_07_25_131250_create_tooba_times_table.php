@@ -22,11 +22,13 @@ class CreateToobaTimesTable extends Migration
             $table
                 ->foreignId("title")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
             $table
                 ->foreignId("description")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
 
             $table->string("time")->nullable();
             $table->string("depend_on")->default("time");

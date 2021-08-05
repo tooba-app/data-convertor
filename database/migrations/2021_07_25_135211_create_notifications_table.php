@@ -18,7 +18,8 @@ class CreateNotificationsTable extends Migration
             $table
                 ->foreignId("creator_id")
                 ->constrained("users")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
             $table
                 ->foreignId("action_id")
                 ->constrained("action")
@@ -27,11 +28,13 @@ class CreateNotificationsTable extends Migration
             $table
                 ->foreignId("title_id")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
             $table
                 ->foreignId("description_id")
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL");
+                ->onDelete("SET NULL")
+                ->nullable();
 
             $table
                 ->foreignId("date_id")
