@@ -16,16 +16,16 @@ class CreateToobaTimesTable extends Migration
         Schema::create("tooba_times", function (Blueprint $table) {
             $table->id();
             $table
-                ->foreignId("creator")
+                ->foreignId("creator_id")
                 ->constrained("users", "id")
                 ->onDelete("CASCADE");
             $table
-                ->foreignId("title")
+                ->foreignId("title_id")
                 ->constrained("texts", "text_id")
                 ->onDelete("SET NULL")
                 ->nullable();
             $table
-                ->foreignId("description")
+                ->foreignId("description_id")
                 ->constrained("texts", "text_id")
                 ->onDelete("SET NULL")
                 ->nullable();

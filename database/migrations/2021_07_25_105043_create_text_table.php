@@ -21,14 +21,14 @@ class CreateTextTable extends Migration
                 ->onDelete("CASCADE");
 
             $table
-                ->foreignId("creator")
+                ->foreignId("creator_id")
                 ->constrained("users", "id")
                 ->onDelete("SET NULL")
                 ->nullable();
 
-            $table->string("language");
+            $table->string("language_id");
             $table
-                ->foreign("language")
+                ->foreign("language_id")
                 ->references("code")
                 ->on("languages");
 
