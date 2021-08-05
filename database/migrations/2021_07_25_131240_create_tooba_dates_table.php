@@ -29,7 +29,7 @@ class CreateToobaDatesTable extends Migration
                 ->constrained("texts", "text_id")
                 ->onDelete("SET NULL")
                 ->nullable();
-            $table->integer("month");
+            $table->integer("month")->nullable();
             $table->integer("day");
 
             $table->timestamps();
