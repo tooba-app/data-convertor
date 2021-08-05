@@ -17,7 +17,7 @@ class CreateActionsTable extends Migration
             $table->id();
             $table
                 ->foreignId("creator")
-                ->constrained("users")
+                ->constrained("users", "id")
                 ->onDelete("SET NULL")
                 ->nullable();
             $table

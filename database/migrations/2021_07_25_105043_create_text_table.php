@@ -22,7 +22,7 @@ class CreateTextTable extends Migration
 
             $table
                 ->foreignId("creator")
-                ->constrained("users")
+                ->constrained("users", "id")
                 ->onDelete("SET NULL")
                 ->nullable();
 
@@ -34,11 +34,6 @@ class CreateTextTable extends Migration
             $table->text("text");
             $table->string("type");
             $table->string("status");
-
-            $table
-                ->foreign("text_id")
-                ->references("id")
-                ->on("texts");
 
             $table->timestamps();
             $table->softDeletes();

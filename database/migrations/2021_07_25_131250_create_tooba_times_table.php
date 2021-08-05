@@ -17,7 +17,7 @@ class CreateToobaTimesTable extends Migration
             $table->id();
             $table
                 ->foreignId("creator")
-                ->constrained("users")
+                ->constrained("users", "id")
                 ->onDelete("CASCADE");
             $table
                 ->foreignId("title")
