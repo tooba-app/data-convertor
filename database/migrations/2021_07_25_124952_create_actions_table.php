@@ -17,19 +17,19 @@ class CreateActionsTable extends Migration
             $table->id();
             $table
                 ->foreignId("creator_id")
+                ->nullable()
                 ->constrained("users", "id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
             $table
                 ->foreignId("title_id")
+                ->nullable()
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
             $table
                 ->foreignId("description_id")
+                ->nullable()
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
 
             $table->string("type");
             $table->integer("score");

@@ -17,42 +17,42 @@ class CreateNotificationsTable extends Migration
             $table->id();
             $table
                 ->foreignId("creator_id")
+                ->nullable()
                 ->constrained("users", "id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
             $table
                 ->foreignId("action_id")
-                ->constrained("action", "id")
+                ->constrained("actions", "id")
                 ->onDelete("CASCADE");
 
             $table
                 ->foreignId("title_id")
+                ->nullable()
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
             $table
                 ->foreignId("description_id")
+                ->nullable()
                 ->constrained("texts", "text_id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
 
             $table
                 ->foreignId("date_id")
+                ->nullable()
                 ->constrained("tooba_dates", "id")
-                ->onDelete("CASCADE")
-                ->nullable();
+                ->onDelete("CASCADE");
 
             $table
                 ->foreignId("time_id")
+                ->nullable()
                 ->constrained("tooba_times", "id")
-                ->onDelete("CASCADE")
-                ->nullable();
+                ->onDelete("CASCADE");
 
             $table
                 ->foreignId("place_id")
+                ->nullable()
                 ->constrained("places", "id")
-                ->onDelete("CASCADE")
-                ->nullable();
+                ->onDelete("CASCADE");
 
             $table->timestamps();
             $table->softDeletes();

@@ -15,16 +15,13 @@ class CreateTextTable extends Migration
     {
         Schema::create("texts", function (Blueprint $table) {
             $table->id();
-            $table
-                ->foreignId("text_id")
-                ->constrained("texts", "id")
-                ->onDelete("CASCADE");
+            $table->foreignId("text_id")->index();
 
             $table
                 ->foreignId("creator_id")
+                ->nullable()
                 ->constrained("users", "id")
-                ->onDelete("SET NULL")
-                ->nullable();
+                ->onDelete("SET NULL");
 
             $table->string("language_id");
             $table
