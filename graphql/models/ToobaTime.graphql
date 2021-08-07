@@ -1,10 +1,10 @@
 type ToobaTime {
     id: ID!
-    title: Text
-    description: Text
+    title: Text @belongsTo
+    description: Text @belongsTo
     time: String
     depend_on: String
-    creator: User!
+    creator: User! @belongsTo
     created_at: DateTime!
     updated_at: DateTime!
 }

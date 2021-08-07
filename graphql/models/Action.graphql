@@ -1,13 +1,13 @@
 type Action {
     id: ID!
-    title: Text
-    description: Text
-    child_actions: [Action]!
-    parent_actions: [Action]!
-    Texts: [Text]!
+    title: Text @belongsTo
+    description: Text @belongsTo
+    child_actions: [Action]! @belongsToMany
+    parent_actions: [Action]! @belongsToMany
+    Texts: [Text]! @hasMany
     type: ActionType!
-    creator: User!
-    notification: [Notification]!
+    creator: User! @belongsTo
+    notification: [Notification]! @hasMany
     score: Int!
     created_at: DateTime!
     updated_at: DateTime!

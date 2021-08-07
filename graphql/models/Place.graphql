@@ -1,10 +1,10 @@
 type Place {
     id: ID!
-    title: Text
-    description: Text
+    title: Text @belongsTo
+    description: Text @belongsTo
     lat: String!
     long: String!
-    creator: User!
+    creator: User! @belongsTo
     created_at: DateTime!
     updated_at: DateTime!
 }

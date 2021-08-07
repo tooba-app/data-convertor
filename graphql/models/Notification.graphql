@@ -1,12 +1,12 @@
 type Notification {
     id: ID!
-    title: Text
-    description: Text
-    date: ToobaDate
-    time: ToobaTime
-    place: Place
-    creator: User!
-    action: Action!
+    title: Text @belongsTo
+    description: Text @belongsTo
+    date: ToobaDate @belongsTo
+    time: ToobaTime @belongsTo
+    place: Place @belongsTo
+    creator: User! @belongsTo
+    action: Action! @belongsTo
     # users: [User]
     created_at: DateTime!
     updated_at: DateTime!
