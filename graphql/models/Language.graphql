@@ -2,6 +2,12 @@ type Language {
     id: ID!
     code: String!
     name: String!
+    localname: String
+    direction: String!
     created_at: DateTime!
     updated_at: DateTime!
+}
+
+extend type Query {
+    languages: [Language]! @all
 }
