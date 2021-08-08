@@ -1,0 +1,7 @@
+# input app {
+#     language: String!
+# }
+
+# extend type Query {
+#     app(input: app): [Text]!
+# }
