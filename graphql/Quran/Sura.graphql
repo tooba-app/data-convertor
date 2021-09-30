@@ -1,0 +1,9 @@
+type Sura {
+    name: String!
+    juz: String!
+    aya_count: String!
+}
+
+extend type Query {
+    QuranSuraByJuz: [Sura]! @all
+}

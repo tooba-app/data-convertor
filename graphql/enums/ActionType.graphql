@@ -1,13 +1,1 @@
-enum ActionType {
-    QURAN
-    CHARITY
-    FASTING
-    BEADS
-    ABLUTION
-    PRAY
-    DUA
-    ZIYARAT
-    DAY
-    MONTH
-    MIXED
-}
+

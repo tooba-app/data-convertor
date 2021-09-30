@@ -2,8 +2,8 @@ type ToobaDate {
     id: ID!
     title: Text @belongsTo
     description: Text @belongsTo
-    month: Integer!
-    day: Integer!
+    month: Int!
+    day: Int!
     creator: User! @belongsTo
     created_at: DateTime!
     updated_at: DateTime!

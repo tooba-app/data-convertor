@@ -1,3 +1,16 @@
+enum ActionType {
+    QURAN
+    CHARITY
+    FASTING
+    BEADS
+    ABLUTION
+    PRAY
+    DUA
+    ZIYARAT
+    DAY
+    MONTH
+    MIXED
+}
 type Action {
     id: ID!
     title: Text @belongsTo
